@@ -10,6 +10,13 @@ using ContosoUniversity.Models;
 
 namespace ContosoUniversity.Pages.Courses
 {
+    public class CourseViewModel
+    {
+        public int CourseID { get; set; }
+        public string Title { get; set; }
+        public int Credits { get; set; }
+        public string DepartmentName { get; set; }
+    }
     public class IndexModel : PageModel
     {
         private readonly ContosoUniversity.Data.SchoolContext _context;
@@ -19,17 +26,18 @@ namespace ContosoUniversity.Pages.Courses
             _context = context;
         }
 
-        public IList<Course> Courses { get;set; }
+        public IList<CourseViewModel> CourseVM { get;set; }
 
         public async Task OnGetAsync()
         {
-            if (_context.Courses != null)
+            CourseVM = await _context.Courses
+            .Select(p => new CourseViewModel
             {
-                Courses = await _context.Courses
-                .Include(c => c.Department)
-                .AsNoTracking()
-                .ToListAsync();
-            }
+                CourseID = p.CourseID,
+                Title = p.Title,
+                Credits = p.Credits,
+                DepartmentName = p.Department.Name
+            }).ToListAsync();
         }
     }
 }
