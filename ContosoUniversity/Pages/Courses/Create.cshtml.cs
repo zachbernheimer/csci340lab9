@@ -31,7 +31,8 @@ namespace ContosoUniversity.Pages.Courses
                  emptyCourse,
                  "course",   // Prefix for form value.
                  s => s.CourseID, s => s.DepartmentID, s => s.Title, s => s.Credits))
-            {
+            {   
+                emptyCourse.Department = _context.Departments.Find(Course.DepartmentID);
                 _context.Courses.Add(emptyCourse);
                 await _context.SaveChangesAsync();
                 return RedirectToPage("./Index");

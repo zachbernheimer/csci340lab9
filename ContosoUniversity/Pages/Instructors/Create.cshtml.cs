@@ -38,7 +38,15 @@ namespace ContosoUniversity.Pages.Instructors
 
         public async Task<IActionResult> OnPostAsync(string[] selectedCourses)
         {
-            var newInstructor = new Instructor();
+            var newInstructor = new Instructor(){
+                LastName = Instructor.LastName,
+                FirstMidName = Instructor.FirstMidName,
+                OfficeAssignment = Instructor.OfficeAssignment,
+                HireDate = Instructor.HireDate
+            };
+            if (newInstructor.OfficeAssignment.Instructor == null){
+                newInstructor.OfficeAssignment.Instructor = newInstructor;
+            }
 
             if (selectedCourses.Length > 0)
             {
@@ -63,16 +71,8 @@ namespace ContosoUniversity.Pages.Instructors
 
             try
             {
-                if (await TryUpdateModelAsync<Instructor>(
-                                newInstructor,
-                                "Instructor",
-                                i => i.FirstMidName, i => i.LastName,
-                                i => i.HireDate, i => i.OfficeAssignment))
-                {
-                    _context.Instructors.Add(newInstructor);
-                    await _context.SaveChangesAsync();
-                    return RedirectToPage("./Index");
-                }
+                _context.Instructors.Add(newInstructor);
+                await _context.SaveChangesAsync();
                 return RedirectToPage("./Index");
             }
             catch (Exception ex)

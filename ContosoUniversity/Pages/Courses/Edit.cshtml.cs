@@ -24,8 +24,7 @@ namespace ContosoUniversity.Pages.Courses
                 return NotFound();
             }
 
-            Course = await _context.Courses
-                .Include(c => c.Department).FirstOrDefaultAsync(m => m.CourseID == id);
+            Course = await _context.Courses.Include(c => c.Department).FirstOrDefaultAsync(m => m.CourseID == id);
 
             if (Course == null)
             {
@@ -50,7 +49,7 @@ namespace ContosoUniversity.Pages.Courses
             {
                 return NotFound();
             }
-
+            
             if (await TryUpdateModelAsync<Course>(
                  courseToUpdate,
                  "course",   // Prefix for form value.

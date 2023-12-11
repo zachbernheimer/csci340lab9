@@ -1,4 +1,5 @@
 using ContosoUniversity.Models;
+using Microsoft.AspNetCore.Authorization.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -57,26 +58,31 @@ namespace ContosoUniversity.Pages.Instructors
             {
                 return NotFound();
             }
-            
 
-            if (await TryUpdateModelAsync<Instructor>(
-                instructorToUpdate,
-                "Instructor",
-                i => i.FirstMidName, i => i.LastName,
-                i => i.HireDate, i => i.OfficeAssignment))
+            instructorToUpdate.LastName = Instructor.LastName;
+            instructorToUpdate.FirstMidName = Instructor.FirstMidName;
+            instructorToUpdate.HireDate = Instructor.HireDate;
+            instructorToUpdate.OfficeAssignment = Instructor.OfficeAssignment;
+
+            if (String.IsNullOrWhiteSpace(instructorToUpdate.OfficeAssignment?.Location))
             {
-                if (String.IsNullOrWhiteSpace(
-                    instructorToUpdate.OfficeAssignment?.Location))
-                {
-                    instructorToUpdate.OfficeAssignment = null;
-                }
+                instructorToUpdate.OfficeAssignment = null;
+            } else {
+                instructorToUpdate.OfficeAssignment.Instructor = Instructor;
+            }
+            try {
                 UpdateInstructorCourses(selectedCourses, instructorToUpdate);
                 await _context.SaveChangesAsync();
                 return RedirectToPage("./Index");
+            } catch (Exception ex)
+            {
+                
             }
             UpdateInstructorCourses(selectedCourses, instructorToUpdate);
             PopulateAssignedCourseData(_context, instructorToUpdate);
             return Page();
+
+           
         }
 
         public void UpdateInstructorCourses(string[] selectedCourses,
