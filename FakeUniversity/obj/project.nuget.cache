@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZWlC6eoi8CBkbrfTMFOVOdGjYWDCKl3e/Gr9U2QKmvT4xcMBUGCYbEchdgFE92C/PrzqVBS1zZdC/2/1QaJ1BA==",
+  "dgSpecHash": "BK2687AnCL5XZqCoNJjISWJ2j4T53zDBTbyK5v8zi3fMq02JrmgTeY9ykWXVvUOusOuGaI0psKKQyAk4B0StiA==",
   "success": true,
-  "projectFilePath": "/Users/zach/Library/CloudStorage/OneDrive-HendrixCollege/School/Senior/Fall/Databases and Web Systems/Labs/csci340lab9/csci340lab9/FakeUniversity/ContosoUniversity.csproj",
+  "projectFilePath": "/Users/zach/Library/CloudStorage/OneDrive-HendrixCollege/School/Senior/Fall/Databases and Web Systems/Labs/csci340lab9/csci340lab9/FakeUniversity/FakeUniversity.csproj",
   "expectedPackageFiles": [
     "/Users/zach/.nuget/packages/azure.core/1.25.0/azure.core.1.25.0.nupkg.sha512",
     "/Users/zach/.nuget/packages/azure.identity/1.7.0/azure.identity.1.7.0.nupkg.sha512",

@@ -22,6 +22,7 @@ namespace FakeUniversity.Models
         [Display(Name = "Enrollment Date")]
         public DateTime EnrollmentDate { get; set; }
         [Display(Name = "Full Name")]
+        public int Age { get; set;}
         public string FullName
         {
             get

@@ -1,8 +1,8 @@
 {
   "Files": [
     {
-      "Id": "/Users/zach/Library/CloudStorage/OneDrive-HendrixCollege/School/Senior/Fall/Databases and Web Systems/Labs/csci340lab9/csci340lab9/FakeUniversity/obj/Debug/net7.0/scopedcss/projectbundle/ContosoUniversity.bundle.scp.css",
-      "PackagePath": "staticwebassets/ContosoUniversity.bundle.scp.css"
+      "Id": "/Users/zach/Library/CloudStorage/OneDrive-HendrixCollege/School/Senior/Fall/Databases and Web Systems/Labs/csci340lab9/csci340lab9/FakeUniversity/obj/Debug/net7.0/scopedcss/projectbundle/FakeUniversity.bundle.scp.css",
+      "PackagePath": "staticwebassets/FakeUniversity.bundle.scp.css"
     },
     {
       "Id": "/Users/zach/Library/CloudStorage/OneDrive-HendrixCollege/School/Senior/Fall/Databases and Web Systems/Labs/csci340lab9/csci340lab9/FakeUniversity/wwwroot/css/site.css",
@@ -245,20 +245,20 @@
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
     },
     {
-      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.ContosoUniversity.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.FakeUniversity.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.build.ContosoUniversity.props",
-      "PackagePath": "build\\ContosoUniversity.props"
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.build.FakeUniversity.props",
+      "PackagePath": "build\\FakeUniversity.props"
     },
     {
-      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.ContosoUniversity.props",
-      "PackagePath": "buildMultiTargeting\\ContosoUniversity.props"
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.FakeUniversity.props",
+      "PackagePath": "buildMultiTargeting\\FakeUniversity.props"
     },
     {
-      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.ContosoUniversity.props",
-      "PackagePath": "buildTransitive\\ContosoUniversity.props"
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.FakeUniversity.props",
+      "PackagePath": "buildTransitive\\FakeUniversity.props"
     }
   ],
   "ElementsToRemove": []

@@ -11574,9 +11574,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/zach/Library/CloudStorage/OneDrive-HendrixCollege/School/Senior/Fall/Databases and Web Systems/Labs/csci340lab9/csci340lab9/FakeUniversity/ContosoUniversity.csproj",
-      "projectName": "ContosoUniversity",
-      "projectPath": "/Users/zach/Library/CloudStorage/OneDrive-HendrixCollege/School/Senior/Fall/Databases and Web Systems/Labs/csci340lab9/csci340lab9/FakeUniversity/ContosoUniversity.csproj",
+      "projectUniqueName": "/Users/zach/Library/CloudStorage/OneDrive-HendrixCollege/School/Senior/Fall/Databases and Web Systems/Labs/csci340lab9/csci340lab9/FakeUniversity/FakeUniversity.csproj",
+      "projectName": "FakeUniversity",
+      "projectPath": "/Users/zach/Library/CloudStorage/OneDrive-HendrixCollege/School/Senior/Fall/Databases and Web Systems/Labs/csci340lab9/csci340lab9/FakeUniversity/FakeUniversity.csproj",
       "packagesPath": "/Users/zach/.nuget/packages/",
       "outputPath": "/Users/zach/Library/CloudStorage/OneDrive-HendrixCollege/School/Senior/Fall/Databases and Web Systems/Labs/csci340lab9/csci340lab9/FakeUniversity/obj/",
       "projectStyle": "PackageReference",
