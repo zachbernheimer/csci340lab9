@@ -151,7 +151,8 @@ namespace ContosoUniversity.Data
                 Name = "English",
                 Budget = 350000,
                 StartDate = DateTime.Parse("2007-09-01"),
-                Administrator = abercrombie
+                Administrator = abercrombie,
+                ConcurrencyToken = new Guid()
             };
 
             var mathematics = new Department
@@ -159,7 +160,8 @@ namespace ContosoUniversity.Data
                 Name = "Mathematics",
                 Budget = 100000,
                 StartDate = DateTime.Parse("2007-09-01"),
-                Administrator = fakhouri
+                Administrator = fakhouri,
+                ConcurrencyToken = new Guid()
             };
 
             var engineering = new Department
@@ -167,7 +169,8 @@ namespace ContosoUniversity.Data
                 Name = "Engineering",
                 Budget = 350000,
                 StartDate = DateTime.Parse("2007-09-01"),
-                Administrator = harui
+                Administrator = harui,
+                ConcurrencyToken = new Guid()
             };
 
             var economics = new Department
@@ -175,7 +178,8 @@ namespace ContosoUniversity.Data
                 Name = "Economics",
                 Budget = 100000,
                 StartDate = DateTime.Parse("2007-09-01"),
-                Administrator = kapoor
+                Administrator = kapoor,
+                ConcurrencyToken = new Guid()
             };
 
             var departments = new Department[]
