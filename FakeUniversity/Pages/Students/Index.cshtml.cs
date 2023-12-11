@@ -24,6 +24,7 @@ namespace FakeUniversity.Pages.Students
 
         public string NameSort { get; set; }
         public string DateSort { get; set; }
+        public string AgeSort { get; set; }
         public string CurrentFilter { get; set; }
         public string CurrentSort { get; set; }
 
@@ -35,6 +36,7 @@ namespace FakeUniversity.Pages.Students
             CurrentSort = sortOrder;
             NameSort = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             DateSort = sortOrder == "Date" ? "date_desc" : "Date";
+            AgeSort = sortOrder == "Age" ? "age_desc" : "Age";
             if (searchString != null)
             {
                 pageIndex = 1;
@@ -63,6 +65,12 @@ namespace FakeUniversity.Pages.Students
                     break;
                 case "date_desc":
                     studentsIQ = studentsIQ.OrderByDescending(s => s.EnrollmentDate);
+                    break;
+                case "Age":
+                    studentsIQ = studentsIQ.OrderBy(s => s.Age);
+                    break;
+                case "age_desc":
+                    studentsIQ = studentsIQ.OrderByDescending(s => s.Age);
                     break;
                 default:
                     studentsIQ = studentsIQ.OrderBy(s => s.LastName);

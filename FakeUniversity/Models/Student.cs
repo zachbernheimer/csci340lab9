@@ -21,8 +21,10 @@ namespace FakeUniversity.Models
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         [Display(Name = "Enrollment Date")]
         public DateTime EnrollmentDate { get; set; }
-        [Display(Name = "Full Name")]
+
         public int Age { get; set;}
+
+        [Display(Name = "Full Name")]
         public string FullName
         {
             get

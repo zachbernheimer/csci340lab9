@@ -51,7 +51,7 @@ namespace FakeUniversity.Pages.Students
             if (await TryUpdateModelAsync<Student>(
                 studentToUpdate,
                 "student",
-                s => s.FirstMidName, s => s.LastName, s => s.EnrollmentDate))
+                s => s.FirstMidName, s => s.LastName, s => s.EnrollmentDate, s => s.Age))
             {
                 await _context.SaveChangesAsync();
                 return RedirectToPage("./Index");
